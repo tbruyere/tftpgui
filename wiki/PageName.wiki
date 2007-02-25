@@ -17,15 +17,15 @@ It has been tested on Windows XP and Linux platforms.
 
 The program is provided in three downloadable formats:
 
-An installer for Windows, which includes an embedded Python interpreter - this should be used by most Windows users.
+An installer for Windows: which includes an embedded Python interpreter - this should be used by most Windows users.
 
-An installer for Windows, which only contains the TFTP Python files - and assumes you already have Python 2.4 or above installed.  This is useful for those of you who understand and use Python - you should have the .pyw extension associated with your Python interpreter.
- 
-A tar file of the TFTPgui Python files.  This could be used by Linux users; untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
+An installer for Windows: which only contains the TFTP Python files - and assumes you already have Python 2.4 or above installed.  This is useful for those of you who understand and use Python - you should have the .pyw extension associated with your Python interpreter.
+
+A tar file of the TFTPgui Python files: This could be used by Linux users; untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
 
 
 
-* USAGE
+= USAGE =
 
 Running TFTPgui (typically using the "python tftpgui.py" command under Linux, or just choosing the menu or desktop icon under Windows), the program presents you with a graphical window, with start, stop, setup and exit buttons.
 
@@ -39,7 +39,7 @@ Exit - will close the program.
 
 
 
-* SETUP OPTIONS
+= SETUP OPTIONS =
 
 TFTP ROOT Folder:  set the folder where files will be sent and received
 
