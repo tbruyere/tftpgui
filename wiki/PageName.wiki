@@ -13,7 +13,7 @@ It provides a simple tftp server for engineers to download configuration files f
 
 It has been tested on Windows XP and Linux platforms.
 
-= Details =
+= Downloads =
 
 The program is provided in three downloadable formats:
 
@@ -24,8 +24,7 @@ An installer for Windows: which only contains the TFTP Python files - and assume
 A tar file of the TFTPgui Python files: This could be used by Linux users; untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
 
 
-
-= USAGE =
+= Usage =
 
 Running TFTPgui (typically using the "python tftpgui.py" command under Linux, or just choosing the menu or desktop icon under Windows), the program presents you with a graphical window, with start, stop, setup and exit buttons.
 
@@ -39,12 +38,11 @@ Exit - will close the program.
 
 
 
-= SETUP OPTIONS =
+= Setup Options =
 
 TFTP ROOT Folder:  set the folder where files will be sent and received
 
-TFTP LOGS Folder:  During transmission, the program writes log entries,
-                   these are held in this folder, which you can set.
+TFTP LOGS Folder:  During transmission, the program writes log entries, these are held in this folder, which you can set.
 
 Allow access from any remote IP Address, or just a specified subnet:
 
@@ -57,7 +55,9 @@ PORT: The port which the tftp server listens on, as standard this is 69
 It should be noted that on Linux, to set up a server listening on any port below 1000 requires root permission, therefore you will need to be root (or use sudo) to run this program on port 69.
 
 APPLY   - Save and implement the options.
+
 CANCEL  - Discard any option changes you have done.
+
 DEFAULT - Set options to the initial defaults.
 
 
@@ -72,14 +72,22 @@ tftpgui.py     The main program - when run, it starts the gui
 The following files are in the same folder, and are called by tftpgui.py:
 
 ipv4_parse.py  Used to parse IP addresses
+
 stopwatch.py   Used to time packets
+
 tftpcfg.py     Used to parse and save configuration values
+
 tftphq.py      Implements the tftp protocol
 
 When tftpgui.py is run, it creates the file tftpgui.cfg to hold configuration data.
 
-It also requires two directories, one to hold logs, which are created during file transfers, and one to act as the root folder to which files are put, and from which files are pulled.
+It also requires two directories, one to hold logs, which are created during file
+transfers, and one to act as the root folder to which files are put, and from which files are pulled.
 
 As default, these are the folders tftplogs and tftproot which are under the folder where the above files are held.
 
 These two folders can be set to other folders of your choice from within the gui.
+
+The graphical environment is Tkinter, and apart from the files listed above, there are no dependencies outside of the standard Python installation.
+
+
