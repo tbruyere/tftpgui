@@ -9,7 +9,7 @@ This program is a TFTP server.
 
 It is intended to run as a user initiated program, rather than a service daemon, and displays a gui interface allowing the user to stop and start the tftp server.
 
-It provides a simple tftp server for engineers to download configuration files from equipment such as routers and switches.
+It provides a simple tftp server for engineers to download and upload configuration files from equipment such as routers and switches.
 
 It has been tested on Windows XP and Linux platforms.
 
@@ -89,4 +89,3 @@ As default, these are the folders tftplogs and tftproot which are under the fold
 These two folders can be set to other folders of your choice from within the gui.
 
 The graphical environment is Tkinter, and apart from the files listed above, there are no dependencies outside of the standard Python installation.
-
