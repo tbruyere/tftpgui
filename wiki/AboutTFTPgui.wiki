@@ -3,7 +3,7 @@
 
 = Introduction =
 
-TFTPgui Version : 1.0
+TFTPgui Version : 1.1
 
 This program is a TFTP server.
 
