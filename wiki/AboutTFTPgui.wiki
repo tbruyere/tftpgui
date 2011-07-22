@@ -3,7 +3,7 @@
 
 = Introduction =
 
-TFTPgui Version : 1.1
+TFTPgui Version : 2.0
 
 This program is a TFTP server.
 
@@ -11,17 +11,17 @@ It is intended to run as a user initiated program, rather than a service daemon,
 
 It provides a simple tftp server for engineers to download and upload configuration files from equipment such as routers and switches.
 
-It has been tested on Windows XP and Linux platforms.
 
-= Downloads =
+Download the tar file tftpgui_2_0.tar : Untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
 
-The program is provided in three downloadable formats:
+Running python tftpgui.py -- help  will give further usage options.
 
-An installer for Windows: which includes an embedded Python interpreter - this should be used by most Windows users.
 
-An installer for Windows: which only contains the TFTP Python files - and assumes you already have Python 2.4 or above installed.  This is useful for those of you who understand and use Python - you should have the .pyw extension associated with your Python interpreter.
+tftpgui requires python 2.5 to 2.7 to be installed, and also the python tk modules.
 
-A tar file of the TFTPgui Python files: This could be used by Linux users; untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
+On Ubuntu/Debian this is package python-tk, on Widows it is built in to Python.
+
+Note, this version does not yet work under python 3
 
 
 = Usage =
@@ -59,33 +59,3 @@ APPLY   - Save and implement the options.
 CANCEL  - Discard any option changes you have done.
 
 DEFAULT - Set options to the initial defaults.
-
-
-= Developer Details =
-
-TFTPgui consists of the files:
-
-tftpgui.py     The main program - when run, it starts the gui
-
-(For windows users, it may be called tftpgui.pyw)
-
-The following files are in the same folder, and are called by tftpgui.py:
-
-ipv4_parse.py  Used to parse IP addresses
-
-stopwatch.py   Used to time packets
-
-tftpcfg.py     Used to parse and save configuration values
-
-tftphq.py      Implements the tftp protocol
-
-When tftpgui.py is run, it creates the file tftpgui.cfg to hold configuration data.
-
-It also requires two directories, one to hold logs, which are created during file
-transfers, and one to act as the root folder to which files are put, and from which files are pulled.
-
-As default, these are the folders tftplogs and tftproot which are under the folder where the above files are held.
-
-These two folders can be set to other folders of your choice from within the gui.
-
-The graphical environment is Tkinter, and apart from the files listed above, there are no dependencies outside of the standard Python installation.
