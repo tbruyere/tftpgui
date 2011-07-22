@@ -26,7 +26,7 @@ Note, this version does not yet work under python 3
 
 = Usage =
 
-Running TFTPgui (typically using the "python tftpgui.py" command under Linux, or just choosing the menu or desktop icon under Windows), the program presents you with a graphical window, with start, stop, setup and exit buttons.
+The program presents you with a graphical window, with start, stop, setup and exit buttons.
 
 Start - will start the server, which will then listen for file transfers from remote tftp clients.
 
