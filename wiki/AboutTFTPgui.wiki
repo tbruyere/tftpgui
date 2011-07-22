@@ -14,7 +14,7 @@ It provides a simple tftp server for engineers to download and upload configurat
 
 Download the tar file tftpgui_2_0.tar : Untar it into a directory of your choice, and running "python tftpgui.py" will run the program.
 
-Running python tftpgui.py -- help  will give further usage options.
+Running python tftpgui.py --help  will give further usage options.
 
 
 tftpgui requires python 2.5 to 2.7 to be installed, and also the python tk modules.
@@ -59,3 +59,13 @@ APPLY   - Save and implement the options.
 CANCEL  - Discard any option changes you have done.
 
 DEFAULT - Set options to the initial defaults.
+
+= Configuration file =
+
+Under normal use, the file tftpgui.cfg is changed whenever the user sets changes on the graphical interface. The file -read on startup, so the users changes are persistent.  Most users need never look at, or edit the file.
+
+New in version 2:
+
+Using the --nogui option on the command line allows the server to be run without a graphical environment, in which case the configuration file is the only form of controlling the server. In this case, a configuration file location can be set on the command line.
+
+The configuration file has one option, not set via the GUI. This is 'listenipaddress' which is normally set to 0.0.0.0 - meaning the server will listen on any ip address.  If however you have a machine with multiple IP addresses and you want the tftp service to only listen on one, you can set the IP address here.
