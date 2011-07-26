@@ -1,3 +1,5 @@
+#command lene options for tftpgui.py
+
 = Introduction =
 
 This is the header documentation of the startup script tftpgui.py
