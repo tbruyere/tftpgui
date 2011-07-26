@@ -1,4 +1,4 @@
-#command line options for tftpgui.py
+#summary command line options for tftpgui.py
 
 = Introduction =
 
