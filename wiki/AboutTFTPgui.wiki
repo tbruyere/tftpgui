@@ -10,7 +10,6 @@ It is intended to run as a user initiated program, rather than a service daemon,
 
 It provides a simple tftp server for engineers to download and upload configuration files from equipment such as routers and switches.
 
-
 If using Windows, download tftpgui_2_1_py25_installer.exe and run it to install, this will give an application icon, which will run the program.
 
 Alternatively, if you are a Python user, and have Python version 2.5 to 2.7 installed, you can download just the Python source files in tftpgui_2_1.zip, unzip it and run 'python tftpgui.pyw'.  You may need to replace the 'python' with the path to the Python interpreter, i.e. C:\Python27\python tftpgui.pyw
