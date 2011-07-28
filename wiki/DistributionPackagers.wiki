@@ -4,6 +4,8 @@
 
 The code requires python 2.5 to 2.7 and imports the Tkinter module, therefore on Ubuntu/Debian systems it needs python-tk
 
+The license is GPL v3
+
 The applications structure is:
 
 tftpgui.py - the script that runs the program
