@@ -97,6 +97,8 @@ tftp_engine has not been written to the standard of a general 'tftp' library - i
 
 = Further Information =
 
+[AboutTFTPgui] - introductory information
+
 CommandlineOptions - gives more info on available options from the command line.
 
 DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
