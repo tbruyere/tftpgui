@@ -52,8 +52,6 @@ The get_defaults() function is also used whenever a user presses the 'Defaults' 
 
 = Further Information =
 
-AboutTFTPgui - introductory information
+[AboutTFTPgui] - introductory information
 
 CommandlineOptions - gives more info on available options from the command line.
-
-DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
