@@ -75,3 +75,7 @@ New in version 2:
 Using the --nogui option on the command line allows the server to be run without a graphical environment, in which case the configuration file is the only form of controlling the server. In this case, a configuration file location can be set on the command line.
 
 The configuration file has one option not set via the GUI; this is 'listenipaddress' which is normally set to 0.0.0.0 - meaning the server will listen on any ip address configured on the PC.  If however you have a machine with multiple IP addresses and you want the tftp service to only listen on one, you can set the IP address here.
+
+= Further Information =
+
+CommandlineOptions - gives more info on available options from the command line.
