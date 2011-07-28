@@ -65,14 +65,6 @@ License\t:  GPLv3
             except Exception:
                 self.logging_enabled = False
 
-    def log_disable(self):
-        "close the logger"
-        if self.logging_enabled:
-            try:
-                self.rootLogger.removeHandler(self.loghandler)
-            except:
-                self.logging_enabled = False   
-
     def add_text(self, text_line, clear=False):
         """Adds text_line to the log, and also to self.text,
            which is used by the gui interface - adds the line to
