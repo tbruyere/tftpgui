@@ -79,4 +79,5 @@ The configuration file has one option not set via the GUI; this is 'listenipaddr
 = Further Information =
 
 CommandlineOptions - gives more info on available options from the command line.
+
 DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
