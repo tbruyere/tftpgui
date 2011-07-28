@@ -50,3 +50,9 @@ require this installing (package python-tk in Debian).
 Note: If set to listen on port 69 (the default tftp server port), then
 under Gnu/Linux the program must be run with administrator pivileges
 (ie using sudo) - as the OS requires this.
+
+= Further Information =
+
+AboutTFTPgui - introductory information
+
+DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
