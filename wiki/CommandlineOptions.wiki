@@ -52,5 +52,3 @@ under Gnu/Linux the program must be run with administrator pivileges
 (ie using sudo) - as the OS requires this.
 
 = Further Information =
-
-<wiki:toc max_depth="1" />
