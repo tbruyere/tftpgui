@@ -1,0 +1,97 @@
+#summary Further detailed information for developers
+
+= The code files =
+
+tftpgui.py  - which is the script that runs the application
+
+tftp_package/tftpcfg.py  - reads and writes to the config file
+
+tftp_package/gui_stuff.py  - runs the GUI
+
+tftp_package/tftp_engine.py  - runs the tftp server
+
+tftp_package/ipv4_parse.py  - parses ip addresses
+
+
+= tftpgui.py =
+
+When tftpgui.py is run, it parses command line options, gets the scriptdirectory where it is located, and sets a default config file (or reads it from the command line).
+
+It then calls functions in tftp_package/tftpcfg.py to read the config file.
+
+Two functions are available:
+
+{{{
+tftpcfg.getconfigstrict(scriptdirectory, configfile)
+}}}
+
+This is called if the option --nogui is given or if a config file is given on the command line.
+
+It reads and parses the configfile strictly - raising an error if any items are missing.
+
+If the program is to be run with a gui, and with the default config file, then the function:
+
+{{{
+tftpcfg.getconfig(scriptdirectory, configfile)
+}}}
+
+is run instead, this also reads the config file, but replaces any missing items with defaults, and even writes out a new one if no default config file exists.
+
+Both these functions return a dictionary:
+
+{{{
+    cfgdict = { "anyclient": True,
+                "clientipaddress": "192.168.0.0",
+                "clientmask": 16,
+                "listenport": 69,
+                "listenipaddress": "0.0.0.0",
+                "tftprootfolder": os.path.join(scriptdirectory,'tftproot'),
+                "logfolder": os.path.join(scriptdirectory,'tftplogs')  }
+}}}
+
+The keys must all exist, but the values are read from the config file, those given above are the defaults. If you wish to incorporate parts of tftpgui in your own program, and don't want to use  tftpcfg.py - then generate the above dictionary some other way.
+
+If no gui is being run, tftp_package/tftp_engine.py is imported and a server is defined:
+
+{{{
+server = tftp_engine.ServerState(cfgdict, serving=True)
+}}}
+
+serving is True to make the tftp server listen straight away.  This defines a 'server' but does not run it, to do that, an  event loop must be run, so:
+
+{{{
+result = tftp_engine.engine_loop(server, nogui=True)
+}}}
+
+This then runs until the process is killed.  It returns 1 on error or 0 if terminated with CTRL-c.
+
+If a gui is to be run, then the gui is run in the main thread, and the engine loop in a second thread.
+
+First a server is defined as before, but this time with serving=False, so it is not serving straight away, it is left to the user to start the server.
+
+Then the engine loop is started in a thread:
+
+{{{
+thread.start_new_thread(tftp_engine.engine_loop, (server, nogui=False))
+}}}
+
+Then gui_stuff is imported, and the gui started by
+
+{{{
+gui_stuff.create_gui(server)
+}}}
+
+This enter a gui event loop, when it exits (via the Exit button on the gui) the server thread is killed by calling
+
+{{{
+server.shutdown()
+}}}
+
+The tftp_engine module does not import either gui_stuff or tftpcfg, so it could be imported and used to run a tftp server loop on its own (but with ipv4_parse.py), just needing the dictionary defined above to create the 'server'.  It does import ipv4_parse, as this is used to work out if the calling client ip address is within the subnet of allowed client addresses.
+
+The engine loop needs the nogui attribute to inform it whether it should print error messages or not.  If nogui is False, and a gui is being run, then it only places messages in the attribute server.text and assumes the gui will read this and display it, on error it will not exit the loop, but will stop serving, giving the user the option to set changes and start the server again. If nogui is True, then on error the loop will print the error message and exit.
+
+The gui can change, and read attributes of the 'server' instance, which controls the server engine.  Read the tftp_engine.py code, in particularly the ServerState class to see what attributes and methods are available.
+
+tftp_engine has not been written to the standard of a general 'tftp' library - it needs more error checking for that. For example gui_stuff plays nicely with tftp_engine, and makes sure server.serving is False before it changes any attributes. Hence in the gui you can only enter setup mode once the server has been stopped.
+
