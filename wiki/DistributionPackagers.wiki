@@ -49,3 +49,11 @@ The defaults could be set here to any folder locations that are user writable an
 The locations are also set in the gui and in the config file as they are user-changeable. Normally I distribute the config file with the two lines that set these locations missing, so the program immediately uses the default locations as defined in the get_defaults() function.
 
 The get_defaults() function is also used whenever a user presses the 'Defaults' button in the GUI.
+
+= Further Information =
+
+AboutTFTPgui - introductory information
+
+CommandlineOptions - gives more info on available options from the command line.
+
+DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
