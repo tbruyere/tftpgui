@@ -81,13 +81,13 @@ Then gui_stuff is imported, and the gui started by
 gui_stuff.create_gui(server)
 }}}
 
-This enter a gui event loop, when it exits (via the Exit button on the gui) the server thread is killed by calling
+This enters a gui event loop, when it exits (via the Exit button on the gui) the server thread is killed by calling
 
 {{{
 server.shutdown()
 }}}
 
-The tftp_engine module does not import either gui_stuff or tftpcfg, so it could be imported and used to run a tftp server loop on its own (but with ipv4_parse.py), just needing the dictionary defined above to create the 'server'.  It does import ipv4_parse, as this is used to work out if the calling client ip address is within the subnet of allowed client addresses.
+The tftp_engine module does not import either gui_stuff or tftpcfg, so it could be imported and used to run a tftp server loop on its own (but with ipv4_parse.py), the programmer will just need the dictionary defined above to create the 'server'.  It does import ipv4_parse, as this is used to work out if the calling client ip address is within the subnet of allowed client addresses.
 
 The engine loop needs the nogui attribute to inform it whether it should print error messages or not.  If nogui is False, and a gui is being run, then it only places messages in the attribute server.text and assumes the gui will read this and display it, on error it will not exit the loop, but will stop serving, giving the user the option to set changes and start the server again. If nogui is True, then on error the loop will print the error message and exit.
 
@@ -95,3 +95,8 @@ The gui can change, and read attributes of the 'server' instance, which controls
 
 tftp_engine has not been written to the standard of a general 'tftp' library - it needs more error checking for that. For example gui_stuff plays nicely with tftp_engine, and makes sure server.serving is False before it changes any attributes. Hence in the gui you can only enter setup mode once the server has been stopped.
 
+= Further Information =
+
+CommandlineOptions - gives more info on available options from the command line.
+
+DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
