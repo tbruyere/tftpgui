@@ -56,3 +56,5 @@ under Gnu/Linux the program must be run with administrator pivileges
 [AboutTFTPgui] - introductory information
 
 DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
+
+ForDevelopers - more detailed program information
