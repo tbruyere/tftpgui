@@ -82,3 +82,5 @@ CommandlineOptions - gives more info on available options from the command line.
 DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
 
 ForDevelopers - more detailed program information
+
+FutureVersions - description of the SVN structure and future work
