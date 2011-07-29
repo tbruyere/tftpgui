@@ -102,3 +102,5 @@ tftp_engine has not been written to the standard of a general 'tftp' library - i
 CommandlineOptions - gives more info on available options from the command line.
 
 DistributionPackagers - gives info for anyone packaging TFTPgui for a Linux distribution.
+
+FutureVersions - description of the SVN structure and future work
