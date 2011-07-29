@@ -1,0 +1,19 @@
+#summary Description of on-going work
+
+= Trunk =
+
+The SVN Trunk on this site contains TFTPgui version 2.x
+
+Any ongoing changes in the Trunk will mainly be to remove any bugs found, and perhaps to improve the code documentation, it is not envisaged that any major features will be added, as the aim of TFTPgui is to be simple.
+
+Version 2 will be compatible with Python 2.5 to 2.7 and will remain so.
+
+You can checkout the Trunk for the most recent changes, but they will not be significantly different from the tarballed version. New version 2.2 will only be tarballed and released if a bug is corrected, 
+
+= Branches =
+
+== tftpgui3 ==
+
+This branch is being used to convert the program to work with Python 3.  Once done a version 3 of tftpgui will be released with the same functionality as version 2, and the two versions will stay in step.
+
+There should be no functional difference between them.
