@@ -59,3 +59,5 @@ The get_defaults() function is also used whenever a user presses the 'Defaults' 
 CommandlineOptions - gives more info on available options from the command line.
 
 ForDevelopers - more detailed program information
+
+FutureVersions - description of the SVN structure and future work
