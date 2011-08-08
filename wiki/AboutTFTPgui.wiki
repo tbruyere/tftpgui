@@ -1,8 +1,6 @@
 #summary Description and usage of TFTPgui
 
-= Introduction =
-
-TFTPgui
+= TFTPgui Introduction =
 
 This program is a TFTP server.
 
@@ -24,13 +22,17 @@ Download the tar file tftpgui_2_1.tar : Untar it into a directory of your choice
 
 Use tftpgui_3_0.tar if you have Python 3.2 or later installed.
 
-Using the option --help on the command line will give further usage options.
-
 TFTPgui requires the python tkinter package.
 
 On Ubuntu/Debian this is package python-tk, (for default Python 2) or python3-tk (for Python 3), on Widows it is built into Python and does not need to be separately installed.
 
 = Usage =
+
+Try:
+
+python tftpgui.py --help
+
+For a description of options.
 
 The program presents you with a graphical window, with start, stop, setup and exit buttons.
 
@@ -41,7 +43,6 @@ Stop - will stop the server.
 Setup - will open a window giving various options described below.
 
 Exit - will close the program.
-
 
 
 = Setup Options =
@@ -70,78 +71,34 @@ DEFAULT - Set options to the initial defaults.
 
 Under normal use, the file tftpgui.cfg is changed whenever the user sets changes on the graphical interface. The file is read on startup, so the users changes are persistent.  Most users need never look at, or edit the file.
 
-New in version 2 and 3:
-
-Using the --nogui option on the command line allows the server to be
- run without a graphical environment, in which case the configuration
- file is the only form of controlling the server. In this case, a
- configuration file location can be set on the command line.
-
-
-
-Try:
-
-
-python tftpgui.py --help
-
-
-For a description of options
-
-
+Using the --nogui option on the command line allows the server to be run without a graphical environment, in which case the configuration file is the only form of controlling the server. In this case, a configuration file location can be set on the command line.
 
 Contents of configuration file:
 
-
-
 {{{
 ---------------------------------------------------
-
 [IPsetup]
-
 clientmask = 16
-
 listenport = 69
-
 anyclient = 1
-
 listenipaddress = 0.0.0.0
-
 clientipaddress = 192.168.0.0
 
-
-
 [Folders]
-
 tftprootfolder = /home/bernie/tftpgui3/tftproot
-
 logfolder = /home/bernie/tftpgui3/tftplogs
-
 ----------------------------------------------------
-
-
 }}}
 
-The value 'anyclient' is set to 1 to indicate any client can contact
- the server, or zero if only a client with an ip address in the given
- subnet will be accepted.
+The value 'anyclient' is set to 1 to indicate any client can contact the server, or zero if only a client with an ip address in the given subnet will be accepted.
 
 
 
-The folder locations will be set to appropriate locations on your
- own PC the first time you run the program.  If passing a copy to
- other users, just delete the [Folders] section, and it will be
- re-created when they first run the program.
+The folder locations will be set to appropriate locations on your own PC the first time you run the program.  If passing a copy to other users, just delete the [Folders] section, and it will be re-created when they first run the program.
 
 
 
-The configuration file has one option not set via the GUI. This
- is 'listenipaddress' which is normally set to 0.0.0.0 - meaning
- the server will listen on all ip addresses configured on the PC.
- If however you have a machine with multiple IP addresses and you
- want the tftp service to only listen on one, you can set the IP
- address here.
-
-
+The configuration file has one option not set via the GUI. This is 'listenipaddress' which is normally set to 0.0.0.0 - meaning the server will listen on all ip addresses configured on the PC. If however you have a machine with multiple IP addresses and you want the tftp service to only listen on one, you can set the IP address here.
 
 = Further Information =
 
