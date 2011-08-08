@@ -2,7 +2,9 @@
 
 = Program Structure =
 
-The code requires python 2.5 to 2.7 and imports the Tkinter module, therefore on Ubuntu/Debian systems it needs python-tk
+The version 2 branch of the code requires python 2.5 to 2.7 and imports the Tkinter module, therefore on Ubuntu/Debian systems it needs python-tk.
+
+The version 3 branch requires python 3.2 or later, and depends on python3-tk.
 
 The license is GPL v3
 
@@ -26,7 +28,7 @@ The user can choose from the gui where tftproot and tftplogs directories will be
 
 The config file tftpgui.cfg is, by default, set in the same directory as the script tftpgui.py, but this can be changed.
 
-line 104 of tftpgui.py is:
+The line where this is set in tftpgui.py is:
 
 {{{
 default_configfile=os.path.join(scriptdirectory,'tftpgui.cfg')
@@ -34,7 +36,7 @@ default_configfile=os.path.join(scriptdirectory,'tftpgui.cfg')
 
 The variable 'default_configfile' can be set here to point to any location, and to any filename, however the config file must be user read and writable as its contents are changed by the GUI.  One suggested location is as a hidden dot pre-fixed file under the users home.
 
-The default locations of the tftproot and tftplogs folders is set in the function get_defaults() at line 64 of the file:
+The default locations of the tftproot and tftplogs folders is set in the function get_defaults() in the file:
 
 tftp_package/tftpcfg.py
 
