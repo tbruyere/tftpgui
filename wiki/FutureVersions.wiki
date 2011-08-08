@@ -14,9 +14,7 @@ You can checkout the Trunk for the most recent changes, but they will not be sig
 
 == tftpgui3 ==
 
-This branch is being used to convert the program to work with Python 3.  Once done a version 3 of tftpgui will be released with the same functionality as version 2, and the two versions will stay in step.
-
-There should be no functional difference between them.
+This branch holds a version of TFTPgui which works with Python 3. Use the tftpgui_3_* source files download if you have the latest version of Python on your machine.
 
 = Further Information =
 
