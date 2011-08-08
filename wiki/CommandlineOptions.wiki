@@ -43,9 +43,7 @@ If 'listenipaddress' is set to a specific IP address of the computer
 only listen on the address given.
 
 If run with the --nogui option then the program has no dependencies other
-than standard Python (versions 2.5 to 2.7).  If run with a GUI then the
-script imports the Tkinter module, and some Gnu/Linux distributions may
-require this installing (package python-tk in Debian).
+than standard Python.  If run with a GUI then the script imports the tkinter package, and some Gnu/Linux distributions may require this installing.
 
 Note: If set to listen on port 69 (the default tftp server port), then
 under Gnu/Linux the program must be run with administrator pivileges
