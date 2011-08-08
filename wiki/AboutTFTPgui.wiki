@@ -71,7 +71,7 @@ Under normal use, the file tftpgui.cfg is changed whenever the user sets changes
 
 Using the --nogui option on the command line allows the server to be run without a graphical environment, in which case the configuration file is the only form of controlling the server. In this case, a configuration file location can be set on the command line.
 
-Contents of configuration file:
+Contents of configuration file
 
 {{{
 ---------------------------------------------------
