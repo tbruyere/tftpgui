@@ -8,8 +8,6 @@ Any ongoing changes in the Trunk will mainly be to remove any bugs found, and pe
 
 Version 2 will be compatible with Python 2.5 to 2.7 and will remain so.
 
-You can checkout the Trunk for the most recent changes, but they will not be significantly different from the tarballed version. New version 2.2 will only be tarballed and released if a bug is corrected, 
-
 = Branches =
 
 == tftpgui3 ==
