@@ -10,17 +10,17 @@ It provides a simple tftp server for engineers to download and upload configurat
 
 If using Windows, download tftpgui_2_1_py25_installer.exe and run it to install, this will give an application icon, which will run the program.
 
-Alternatively, if you are a Python user, and have Python version 2.5 to 2.7 installed, you can download just the Python source files in tftpgui_2_1.zip, unzip it and run 'python tftpgui.pyw'.  You may need to replace the 'python' with the path to the Python interpreter, i.e. C:\Python27\python tftpgui.pyw
+Alternatively, if you are a Python user, and have Python version 2.5 to 2.7 installed, you can download just the Python source files in tftpgui_2_2.zip, unzip it and run 'python tftpgui.pyw'.  You may need to replace the 'python' with the path to the Python interpreter, i.e. C:\Python27\python tftpgui.pyw
 
-If you have Python 3.2 or later installed, download tftpgui_3_0.zip instead.
+If you have Python 3.2 or later installed, download tftpgui_3_1.zip instead.
 
 It would also be possible to associate the .pyw extension with the python interpreter, in which case merely double clicking on the tftpgui.pyw file will run the program.
 
 If you are a Linux user:
 
-Download the tar file tftpgui_2_1.tar : Untar it into a directory of your choice, and running "python tftpgui.py" will run the program.  Or you could make tftpgui.py executable, and run it directly.
+Download the tar file tftpgui_2_2.tar : Untar it into a directory of your choice, and running "python tftpgui.py" will run the program.  Or you could make tftpgui.py executable, and run it directly.
 
-Use tftpgui_3_0.tar if you have Python 3.2 or later installed.
+Use tftpgui_3_1.tar if you have Python 3.2 or later installed.
 
 TFTPgui requires the python tkinter package. On Ubuntu/Debian this is package python-tk, (for default Python 2) or python3-tk (for Python 3), on Windows it is built into Python and does not need to be separately installed.
 
@@ -67,11 +67,11 @@ DEFAULT - Set options to the initial defaults.
 
 = Configuration file =
 
-Under normal use, the file tftpgui.cfg is changed whenever the user sets changes on the graphical interface. The file is read on startup, so the users changes are persistent.  Most users need never look at, or edit the file.
+Under normal use, the hidden file .tftpgui.cfg is initially created in the users home directory, or under Windows - in the per-user application directory.  The file is changed whenever the user sets changes on the graphical interface. The file is subsequently read on startup, so the users changes are persistent.  Most users need never look at, or edit the file.
 
 Using the --nogui option on the command line allows the server to be run without a graphical environment, in which case the configuration file is the only form of controlling the server. In this case, a configuration file location can be set on the command line.
 
-Contents of configuration file
+Typical contents of configuration file
 
 {{{
 ---------------------------------------------------
