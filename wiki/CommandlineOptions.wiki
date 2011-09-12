@@ -16,15 +16,17 @@ by placing the files in a directory and running the script from there.
 
 The program is run with:
 
-`python tftpgui.py [options] <configuration-file>
+{{{
+python tftpgui.py [options] <configuration-file>
 
 The command line options are:
 
---nogui : in which case the tftp server is run, but no GUI is created.
+--nogui : in which case the tftp server is run, but no GUI is created
 --version : prints the version number and exits
 --help : prints a usage message and exits
 
-<configuration-file> : The optional location of a configuration file.`
+<configuration-file> : The optional location of a configuration file.
+}}}
 
 Normally a hidden file .tftpgui.cfg in the users home directory will
 be created with default values.
