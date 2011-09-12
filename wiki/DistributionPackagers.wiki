@@ -12,8 +12,6 @@ The applications structure is:
 
 tftpgui.py - the script that runs the program
 
-tftpgui.cfg - the configuration file
-
 Directories:
 
 tftp_package - contains pure python modules that run the application
@@ -24,35 +22,12 @@ tftplogs - a folder where logs are created, (note the application rotates and li
 
 The user can choose from the gui where tftproot and tftplogs directories will be sited.
 
-= Defaults and how they can be changed =
+The file .tftpgui.cfg in the users home directory is created on first startup, and holds parameters set by the user via the GUI, so these changes are persistent.
 
-The config file tftpgui.cfg is, by default, set in the same directory as the script tftpgui.py, but this can be changed.
+The initial default tftproot and tftplogs directories are set in the function:
 
-The line where this is set in tftpgui.py is:
+tftp_package.tftpcfg.get_defaults()
 
-{{{
-default_configfile=os.path.join(scriptdirectory,'tftpgui.cfg')
-}}}
-
-The variable 'default_configfile' can be set here to point to any location, and to any filename, however the config file must be user read and writable as its contents are changed by the GUI.  One suggested location is as a hidden dot pre-fixed file under the users home.
-
-The default locations of the tftproot and tftplogs folders is set in the function get_defaults() in the file:
-
-tftp_package/tftpcfg.py
-
-Specifically:
-
-{{{
-    if SCRIPTDIRECTORY:
-        cfgdict["tftprootfolder"]=os.path.join(SCRIPTDIRECTORY,'tftproot')
-        cfgdict["logfolder"]=os.path.join(SCRIPTDIRECTORY,'tftplogs')
-}}}
-
-The defaults could be set here to any folder locations that are user writable and readable.
-
-The locations are also set in the gui and in the config file as they are user-changeable. Normally I distribute the config file with the two lines that set these locations missing, so the program immediately uses the default locations as defined in the get_defaults() function.
-
-The get_defaults() function is also used whenever a user presses the 'Defaults' button in the GUI.
 
 = Further Information =
 
