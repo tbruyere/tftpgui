@@ -90,7 +90,7 @@ logfolder = /home/bernie/tftpgui3/tftplogs
 
 The value 'anyclient' is set to 1 to indicate any client can contact the server, or zero if only a client with an ip address in the given subnet will be accepted.
 
-The folder locations will be set to appropriate locations on your own PC the first time you run the program.  If passing a copy to other users, just delete the Folders section, and it will be re-created when they first run the program.
+The folder locations will be set to appropriate locations on your own PC the first time you run the program.
 
 The configuration file has one option not set via the GUI. This is 'listenipaddress' which is normally set to 0.0.0.0 - meaning the server will listen on all ip addresses configured on the PC. If however you have a machine with multiple IP addresses and you want the tftp service to only listen on one, you can set the IP address here.
 
